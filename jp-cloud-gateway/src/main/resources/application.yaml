@@ -1,6 +1,7 @@
 spring:
   application:
     name: jp-cloud-gateway
+    private-key: ${PRIVATE-KEY}
 eureka:
   instance:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
