@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: jp-service-discovery
+server:
+  port: 8761
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: false
