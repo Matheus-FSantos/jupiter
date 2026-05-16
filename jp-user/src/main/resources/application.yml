@@ -16,9 +16,15 @@ eureka:
   instance:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 logging:
+  include-mdc: true
   structured:
     format:
       console: logstash
 jupiter:
   security:
     public-key: ${PUBLIC-KEY}
+management:
+  tracing:
+    enabled: true # Garante que o motor de rastreamento está ativo
+    sampling:
+      probability: 1.0
